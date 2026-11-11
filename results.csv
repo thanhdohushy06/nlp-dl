@@ -1,0 +1,14 @@
+Experiment,Setting,Accuracy,F1,Training Time (s),Parameters
+Exp 1: Pretrained vs Scratch,Transformer from scratch,1.0,1.0,50.36,"4,386,178"
+Exp 1: Pretrained vs Scratch,Pretrained Transformer (Fine-tuning),0.92,0.92,36.77,"4,386,178"
+Exp 2: Frozen vs Fine-tuning,Mode A: Frozen Encoder (No),0.9867,0.9865,18.5,Trainable: 258
+Exp 2: Frozen vs Fine-tuning,Mode B: Fine-tuning (Yes),0.92,0.92,36.77,"Trainable: 4,386,178"
+Exp 3: Training Data Amount,Pretrained (10% data),0.5733,0.4074,3.88,"4,386,178"
+Exp 3: Training Data Amount,Pretrained (25% data),0.54,0.5241,9.2,"4,386,178"
+Exp 3: Training Data Amount,Pretrained (50% data),0.9467,0.9494,19.45,"4,386,178"
+Exp 3: Training Data Amount,Pretrained (100% data),0.9533,0.9554,36.89,"4,386,178"
+Exp 4: Max Sequence Length,Length T = 64,0.9733,0.974,22.04,"O(T^2) Attention: 64^2 = 4,096"
+Exp 4: Max Sequence Length,Length T = 128,0.92,0.92,36.77,"O(T^2) Attention: 128^2 = 16,384"
+Exp 4: Max Sequence Length,Length T = 256,0.92,0.9167,76.06,"O(T^2) Attention: 256^2 = 65,536"
+Exp 5: Domain Shift,In-domain (Movie Reviews),0.92,0.92,36.77,Domain A
+Exp 5: Domain Shift,Out-of-domain (News / Technical),0.3333,0.0,0.0,Domain B
